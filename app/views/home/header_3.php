@@ -15,32 +15,32 @@
   <title>Mobilificio Minatori</title>
 
   <!-- For favicon png -->
-  <link rel="shortcut icon" type="image/icon" href="../../assets/logo/logo_def.jpg" />
+  <link rel="shortcut icon" type="image/icon" href="../assets/logo/logo_def.jpg" />
 
   <!--font-awesome.min.css-->
-  <link rel="stylesheet" href="../../assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
 
   <!--linear icon css-->
-  <link rel="stylesheet" href="../../assets/css/linearicons.css" />
+  <link rel="stylesheet" href="../assets/css/linearicons.css" />
 
   <!--animate.css-->
-  <link rel="stylesheet" href="../../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
 
   <!--owl.carousel.css-->
-  <link rel="stylesheet" href="../../assets/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css" />
 
   <!--bootstrap.min.css-->
-  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
 
   <!-- bootsnav -->
-  <link rel="stylesheet" href="../../assets/css/bootsnav.css" />
+  <link rel="stylesheet" href="../assets/css/bootsnav.css" />
 
   <!--style.css-->
-  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 
   <!--responsive.css-->
-  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,9 +52,6 @@
 </head>
 
 <body>
-<?php
-session_start();
-?>
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -98,13 +95,13 @@ session_start();
                   </li>
                   <!--/.search-->
                   <li class="dropdown">
-                    <a href="<?=$data['base_path'];?>/home/cart" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="<?=$data['base_path'];?>/home/cart"  class="dropdown-toggle" data-toggle="dropdown">
                       <span class="lnr lnr-cart"></span>
                       <span class="badge badge-bg-1">2</span>
                     </a>
                     <ul class="dropdown-menu cart-list s-cate">
                       <li class="single-cart-list">
-                        <a href="#" class="photo"><img src="../../assets/images/collection/arrivals1.png" class="cart-thumb" alt="image" /></a>
+                        <a href="#" class="photo"><img src="../assets/images/collection/arrivals1.png" class="cart-thumb" alt="image" /></a>
                         <div class="cart-list-txt">
                           <h6>
                             <a href="#">arm <br />
@@ -120,7 +117,7 @@ session_start();
                       </li>
                       <!--/.single-cart-list -->
                       <li class="single-cart-list">
-                        <a href="#" class="photo"><img src="../../assets/images/collection/arrivals2.png" class="cart-thumb" alt="image" /></a>
+                        <a href="#" class="photo"><img src="../assets/images/collection/arrivals2.png" class="cart-thumb" alt="image" /></a>
                         <div class="cart-list-txt">
                           <h6>
                             <a href="#">single <br />
@@ -136,7 +133,7 @@ session_start();
                       </li>
                       <!--/.single-cart-list -->
                       <li class="single-cart-list">
-                        <a href="#" class="photo"><img src="../../assets/images/collection/arrivals3.png" class="cart-thumb" alt="image" /></a>
+                        <a href="#" class="photo"><img src="../assets/images/collection/arrivals3.png" class="cart-thumb" alt="image" /></a>
                         <div class="cart-list-txt">
                           <h6>
                             <a href="#">wooden arn <br />
@@ -211,4 +208,3 @@ session_start();
       <!-- top-area End -->
   </header>
   <!--/.welcome-hero-->
-

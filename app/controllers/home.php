@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../app/models/home.php';
 function controller_home_index()
 {
@@ -28,6 +29,16 @@ function controller_home_loginact()
 
 function controller_home_logout()
 {
+    view_render_html();
+}
+
+function controller_home_cart()
+{
+    global $data;
+    if(isset($_SESSION['username']))
+    {
+        $data['prodotti']=model_get_carrello_prodotti($_SESSION['username']);
+    }
     view_render_html();
 }
 
