@@ -170,7 +170,7 @@ session_start();
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                   <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Mobili<span>ficio</span>.</a>
+                <a class="navbar-brand" href=<?=$data['base_path'];?>>Mobili<span>ficio</span>.</a>
               </div>
               <!--/.navbar-header-->
               <!-- End Header Navigation -->
@@ -180,7 +180,20 @@ session_start();
                 <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                   <li><a href="<?= $data['base_path']; ?>">Home</a></li>
                   <li><a href="<?= $data['base_path']; ?>/products/all">Prodotti</a></li>
-                  <li><a href="<?= $data['base_path']; ?>/home/login">Login</a></li>
+                  <?php
+                  if(isset($_SESSION['username']))  
+                    {
+                      ?> 
+                        <li><a href="<?= $data['base_path']; ?>/home/logout">Logout</a></li>
+                      <?php
+                    } 
+                    else
+                    {
+                      ?> 
+                        <li><a href="<?= $data['base_path']; ?>/home/login">Login</a></li>
+                      <?php
+                    }
+                    ?>
                 </ul>
                 <!--/.nav -->
               </div>

@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# tutto va a public/index.php in rewrite
+# assets viene lasciata stare
+
+# stop processing (L), if already in the /public directory
+RewriteRule ^public/ - [L]
+
+# static assets (css, fonts, js) if they exist
+RewriteRule ^assets/ - [L]
+
+# route all other requests to public
+RewriteRule ^(.*)$ public/index.php?route=$1 [L,QSA]

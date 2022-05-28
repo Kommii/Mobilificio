@@ -26,4 +26,9 @@ function controller_home_loginact()
     view_render_html();
 }
 
+function controller_home_logout()
+{
+    view_render_html();
+}
+
 ?>
