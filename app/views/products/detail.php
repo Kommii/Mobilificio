@@ -27,13 +27,20 @@
                               <?=$product['prezzoV'];?>€
                             </p>
                           </div>
-                          <button
-                            class="btn-cart welcome-add-cart"
-                            onclick="window.location.href='#'"
-                          >
-                            <span class="lnr lnr-plus-circle"></span>
-                            add <span>to</span> cart
-                          </button>
+                          <br/>
+                          <?php
+                          if(isset($_SESSION['username']))
+                          {
+                            ?>
+                          <form method="post" action="<?=$data['base_path']; ?>/home/addcart">
+                          <label for="quantita">Quantità:</label>
+                          <input type="number" min=1 value=1 max=99 name="quantita"/><br/>
+                          <input type="hidden" value="<?=$product['idProdotto'];?>" name="idProdotto"/>
+                          <button class="btn-cart welcome-add-cart"><span class="lnr lnr-plus-circle"></span>add <span>to</span> cart</button>
+                          </form>
+                          <?php
+                          }
+                          ?>
                         </div>
                         <!--/.welcome-hero-txt-->
                       </div>

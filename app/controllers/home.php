@@ -42,4 +42,15 @@ function controller_home_cart()
     view_render_html();
 }
 
+function controller_home_addcart()
+{
+    global $data;
+    if(isset($_SESSION['username']))
+    {
+        $idProdotto=$_POST['idProdotto'];
+        $quantita=$_POST['quantita'];
+        model_insert_to_cart($idProdotto, $quantita, $_SESSION['username']);
+    }
+    view_render_html();
+}
 ?>
