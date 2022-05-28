@@ -52,9 +52,6 @@
 </head>
 
 <body>
-<?php
-session_start();
-?>
   <!--[if lte IE 9]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please

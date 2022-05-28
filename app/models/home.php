@@ -27,7 +27,7 @@ function model_get_carrello_prodotti($username)
 {
   $mysqli = db_connect();
   $user = $mysqli->real_escape_string($username);
-  $sql="SELECT p.* FROM cliente as c INNER JOIN carrello as ca on c.idCliente=ca.idCliente
+  $sql="SELECT p.*, pre.quantita FROM cliente as c INNER JOIN carrello as ca on c.idCliente=ca.idCliente
   INNER JOIN presenzapr as pre on ca.idCarrello=pre.idCarrello
   INNER JOIN prodotto as p on pre.idProdotto=p.idProdotto
   where c.username='$user'";
