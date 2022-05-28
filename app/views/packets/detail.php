@@ -47,7 +47,7 @@ include("header_2.php");
           <input type="hidden" value="<?= $idpa; ?>" name="idPacchetto" />
           <button class="btn-cart welcome-add-cart"><span class="lnr lnr-plus-circle"></span>add <span>to</span> cart</button>
         </form>
-      <?php
+        <?php
       }
       ?>
     </div>

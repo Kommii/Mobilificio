@@ -14,3 +14,8 @@ function controller_products_detail($id)
     $data['row'] = model_products_detail($id);
     view_render_html();
 }
+
+function controller_products_delete($id){
+    model_products_delete($id);
+    view_render_html();
+}
