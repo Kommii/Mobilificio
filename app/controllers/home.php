@@ -66,4 +66,5 @@ function controller_home_addcartp()
     }
     view_render_html();
 }
-?>
+
+

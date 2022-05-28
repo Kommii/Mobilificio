@@ -48,4 +48,18 @@ function model_products_delete($id)
     $conn->close();
 }
 
+function model_products_update($id, $nome, $descrizione, $lunghezza, $larghezza, $altezza, $immagine, $prezzoV)
+{
+  $conn = db_connect();
+  $idProd = intval($id);
+  $sql = "UPDATE prodotto SET nome = '$nome' , descrizione = '$descrizione' , lunghezza = $lunghezza , larghezza = $larghezza , altezza = $altezza , immagine = '$immagine' , prezzoV = $prezzoV WHERE idProdotto = $id";
+  $result = $conn -> query($sql);
+    if(!$result)
+    {
+        echo $conn->error;
+        exit();
+    }
+    $conn->close();
+}
+
 ?>
