@@ -22,4 +22,17 @@ function model_packets_all()
     return $rows;
 }
 
+function model_packets_allproducts($idPacchetto)
+{
+    $conn = db_connect();
+    $sql = "SELECT pr.* from pacchetto as pa inner join appartenenza as a on pa.idPacchetto=a.idPacchetto
+    inner join prodotto as pr on a.idProdotto=pr.idProdotto
+    where pa.idPacchetto=$idPacchetto";
+    $result = $conn->query($sql);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $result->free();
+    $conn->close();
+    return $rows;
+}
+
 ?>

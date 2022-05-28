@@ -7,4 +7,11 @@ function controller_packets_all()
     $data['rows'] = model_packets_all();
     view_render_html();
 }
+
+function controller_packets_detail($id)
+{
+    global $data;
+    $data['products'] = model_packets_allproducts($id);
+    view_render_html();
+}
 ?>
