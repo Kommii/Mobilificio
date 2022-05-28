@@ -67,13 +67,23 @@ function get_id_cart() {
 function model_insert_to_cart($idProdotto, $quantita, $username)
 {
   $mysqli = db_connect();
-  $id = intval($idProdotto);
+  $ida = intval($idProdotto);
   $quantità = intval($quantita);
   $user = $mysqli->real_escape_string($username); 
   $idCarrello = get_id_cart();
   $cond = false;
-  $ids = all_packet_id_cart($idCarrello[0]);
-  $sql = "INSERT INTO presenzapr(idProdotto, idCarrello, quantita) VALUES('$id', '$idCarrello[0]', '$quantità')";
+  $ids = all_products_id_cart($idCarrello[0]);
+  foreach($ids as $id){
+    if($id['idProdotto'] == $idProdotto){
+      $cond = true;
+    }
+  }
+  if($cond == false){
+  $sql = "INSERT INTO presenzapr(idProdotto, idCarrello, quantita) VALUES('$ida', '$idCarrello[0]', '$quantità')";
+  }
+  else{
+    $sql = "UPDATE presenzapr SET quantita = $quantita WHERE idProdotto = $idProdotto";
+  }
   $result = $mysqli -> query($sql);
     if(!$result)
     {
@@ -85,7 +95,7 @@ function model_insert_to_cart($idProdotto, $quantita, $username)
 
 function all_products_id_cart($idCarrello){
   $mysqli = db_connect();
-  $sql="SELECT pa.idPacchetto from carrello as ca INNER JOIN presenzapa as pa on ca.idCarrello=pa.idCarrello where pa.idCarrello = $idCarrello";
+  $sql="SELECT pr.idProdotto from carrello as ca INNER JOIN presenzapr as pr on ca.idCarrello=pr.idCarrello where pr.idCarrello = $idCarrello";
   $result=$mysqli->query($sql);
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   $result->free();
