@@ -14,7 +14,7 @@ function db_connect()
 function model_products_all()
 {
   $conn = db_connect();
-  $sql = "SELECT * FROM prodotto ORDER BY idProdotto";
+  $sql = "SELECT * FROM prodotto ORDER BY idCategoria";
   $result = $conn->query($sql);
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   $result->free();

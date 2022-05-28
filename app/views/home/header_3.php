@@ -177,6 +177,7 @@
                 <ul class="nav navbar-nav navbar-center" data-in="fadeInDown" data-out="fadeOutUp">
                   <li><a href="<?= $data['base_path']; ?>">Home</a></li>
                   <li><a href="<?= $data['base_path']; ?>/products/all">Prodotti</a></li>
+                  <li><a href="<?= $data['base_path']; ?>/packets/all">Pacchetti</a></li>
                   <?php
                   if(isset($_SESSION['username']))  
                     {
