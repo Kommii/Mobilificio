@@ -11,6 +11,7 @@ function controller_packets_all()
 function controller_packets_detail($id)
 {
     global $data;
+    $data['id'] = $id;
     $data['products'] = model_packets_allproducts($id);
     view_render_html();
 }

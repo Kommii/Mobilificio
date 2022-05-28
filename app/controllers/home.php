@@ -38,6 +38,7 @@ function controller_home_cart()
     if(isset($_SESSION['username']))
     {
         $data['prodotti']=model_get_carrello_prodotti($_SESSION['username']);
+        $data['pacchetti']=model_get_carrello_pacchetti($_SESSION['username']);
     }
     view_render_html();
 }
@@ -50,6 +51,18 @@ function controller_home_addcart()
         $idProdotto=$_POST['idProdotto'];
         $quantita=$_POST['quantita'];
         model_insert_to_cart($idProdotto, $quantita, $_SESSION['username']);
+    }
+    view_render_html();
+}
+
+function controller_home_addcartp()
+{
+    global $data;
+    if(isset($_SESSION['username']))
+    {
+        $idPacchetto=$_POST['idPacchetto'];
+        $quantita=$_POST['quantita'];
+        model_insert_to_cartp($idPacchetto, $quantita, $_SESSION['username']);
     }
     view_render_html();
 }
