@@ -142,4 +142,16 @@ function model_products_search($nome)
   return $rows;
 }
 
+function model_products_semilavorati_materiale($materiale){
+  $conn = db_connect();
+  $mat = $conn -> real_escape_string($materiale);
+  $sql = "SELECT * FROM prodotto
+  WHERE materiale = '$mat'
+  ORDER BY prezzoV";
+  $result = $conn->query($sql);
+  $rows = $result->fetch_all(MYSQLI_ASSOC);
+  $result->free();
+  $conn->close();
+  return $rows;
+}
 ?>

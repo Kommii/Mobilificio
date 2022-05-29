@@ -89,3 +89,12 @@ function controller_products_search()
     $data['rows']=model_products_search($prodotto);
     view_render_html();
 }
+
+function controller_products_semilavorati()
+{
+    global $data;
+    $materiale=$_GET['materiale'];
+    $data['rows']=model_products_semilavorati_materiale($materiale);
+    view_render_html();
+}
+?>
