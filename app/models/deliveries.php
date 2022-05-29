@@ -24,8 +24,19 @@ function model_deliveries_all()
     return $rows;
 }
 
-function model_deliveries_price()
+function model_deliveries_detail($idConsegna)
 {
-
+    $id = intval($idConsegna);
+    $conn = db_connect();
+    $sql = "SELECT p.*, p.prezzoV*s.quantita as costoTot, s.quantita FROM consegna as c INNER JOIN spaccio as s on c.idConsegna=s.idConsegna
+    INNER JOIN prodotto as p on s.idProdotto=p.idProdotto
+    WHERE c.idConsegna=$id";
+    $result = $conn->query($sql);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $result->free();
+    $conn->close();
+    return $rows;
 }
+
+
 ?>

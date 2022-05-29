@@ -1,5 +1,6 @@
 <?php
     include("header.php");
+    global $data;
     if (!isset($_SESSION['admin'])) {
     ?>
       <section id="new-arrivals" class="new-arrivals">
@@ -51,7 +52,7 @@
             {
                 ?>
                 <tr>
-                    <td><?=$row['idConsegna'];?></td>
+                    <td> <a href="<?= $data['base_path'] ?>/deliveries/detail/<?= $row['idConsegna']; ?>"><?=$row['idConsegna'];?></a></td>
                     <td><?=$row['data'];?></td>
                     <td><?=$row['indirizzo'];?></td>
                     <td><?=$row['cap'];?></td>
