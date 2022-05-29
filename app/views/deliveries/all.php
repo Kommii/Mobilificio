@@ -89,6 +89,16 @@
         </div>
         </form>
         </center>
+        <br/>
+        <br/>
+        <br/>
+        <center>
+        <form method="post" action="<?=$data['base_path'];?>/deliveries/companiesnop">
+            <label>aziende che forniscono sia prodotti finiti che semifiniti, i cui articoli non sono mai
+                stati venduti nel negozio</label> <br/>
+            <button class="btn-cart welcome-add-cart" type="submit">Visualizza</button>
+        </form>
+        </center>
         <?php
             include("footer.php");
     }

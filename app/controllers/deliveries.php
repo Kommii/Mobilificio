@@ -17,5 +17,11 @@ function controller_deliveries_detail($id)
     view_render_html();
 }
 
+function controller_deliveries_companiesnop()
+{
+    global $data;
+    $data['rows'] = model_deliveries_companies_noproducts();
+    view_render_html();
+}
 
 ?>

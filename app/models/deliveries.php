@@ -49,5 +49,18 @@ function model_deliveries_detail($idConsegna)
     return $rows;
 }
 
+function model_deliveries_companies_noproducts(){
+  $conn = db_connect();
+    $sql = "SELECT fp.* from fornitriceproduttrice as fp
+    where fp.idFornProd not in (SELECT fp.idFornProd from fornitriceproduttrice as fp inner join rifornimento as r on fp.idFornProd=r.idFornProd
+    inner join prodotto as pr on r.idProdotto=pr.idProdotto
+    inner join spaccio as s on pr.idProdotto=s.idProdotto
+    group by fp.idFornProd) and fp.idFornProd in (SELECT idFornProd from rifornimento)";
+    $result = $conn->query($sql);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $result->free();
+    $conn->close();
+    return $rows;
+}
 
 ?>
