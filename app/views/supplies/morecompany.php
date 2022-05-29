@@ -18,7 +18,7 @@
     <?php
     include("footer.php");
     }else{
-        $supplies=$data['rows'];
+        $products=$data['rows'];
         ?>
         <style>
         table, th, td {
@@ -38,24 +38,22 @@
                 <center>
             <table>
                 <tr>
-                    <th>ID Fornitura</th>
-                    <th>Quantità</th>
-                    <th>Data</th>
-                    <th>Costo</th>
-                    <th>Azienda Fornitrice</th>
-                    <th>Prodotto</th>
+                    <th>ID Prodotto</th>
+                    <th>Tipo</th>
+                    <th>Nome</th>
+                    <th>Prezzo di acquisto</th>
+                    <th>Numero fornitori</th>
                 </tr>
             <?php
-            foreach($supplies as $row)
+            foreach($products as $row)
             {
                 ?>
                 <tr>
-                    <td><?=$row['idFornitura'];?></td>
-                    <td><?=$row['quantita'];?></td>
-                    <td><?=$row['data'];?></td>
-                    <td><?=$row['costo'];?></td>
-                    <td><?=$row['azienda'];?></td>
-                    <td><?=$row['prodotto'];?></td>
+                    <td><?=$row['idProdotto'];?></td>
+                    <td><?=$row['tipo'];?></td>
+                    <td><?=$row['nome'];?></td>
+                    <td><?=$row['prezzoA'];?></td>
+                    <td><?=$row['n_aziende'];?></td>
                 </tr>
                 <?php
             }
@@ -65,23 +63,6 @@
             </div>
         </div>
         </section>
-        <center>
-<section id="new-arrivals" class="new-arrivals">
-  <div class="container">
-    <div class="welcome-hero-txt">
-      <div class="welcome-hero-txt">
-        <center>
-          <h4><b>Visualizza i prodotti forniti da 2 o più aziende</b></h4>
-        </center>
-      </div>
-        <form method="post" action="<?= $data['base_path']; ?>/supplies/morecompany">
-          <button class="btn-cart welcome-add-cart">visualizza</button>
-        </form>
-    </div>
-  </div>
-  <!--/.container-->
-</section>
-    </center>
         <?php
             include("footer.php");
     }
