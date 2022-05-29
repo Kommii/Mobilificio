@@ -81,3 +81,11 @@ function controller_products_removepr($id)
     model_presenzapr_delete($id);
     view_render_html();
 }
+
+function controller_products_search()
+{
+    global $data;
+    $prodotto=$_POST['prodotto'];
+    $data['rows']=model_products_search($prodotto);
+    view_render_html();
+}

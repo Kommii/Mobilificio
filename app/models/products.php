@@ -127,4 +127,18 @@ function model_products_sales()
     return $rows;
 }
 
+function model_products_search($nome)
+{
+  $conn = db_connect();
+  $prodotto = $conn -> real_escape_string($nome);
+  $sql = "SELECT * FROM prodotto
+  WHERE nome like '%$prodotto%'
+  ORDER BY idCategoria";
+  $result = $conn->query($sql);
+  $rows = $result->fetch_all(MYSQLI_ASSOC);
+  $result->free();
+  $conn->close();
+  return $rows;
+}
+
 ?>
