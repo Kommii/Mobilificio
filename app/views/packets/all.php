@@ -25,16 +25,6 @@
                   alt="new-arrivals images"/>
                 
                 <div class="single-new-arrival-bg-overlay"></div>
-                <div class="new-arrival-cart">
-                  <p>
-                    <span class="lnr lnr-cart"></span>
-                    <a href="#">add <span>to </span> cart</a>
-                  </p>
-                  <p class="arrival-review pull-right">
-                    <span class="lnr lnr-heart"></span>
-                    <span class="lnr lnr-frame-expand"></span>
-                  </p>
-                </div>
               </div>
               </a>
               <h4><a href="<?=$data['base_path']?>/packets/detail/<?=$row['idPacchetto'];?>"><?=$row['nomePa'];?></a></h4>

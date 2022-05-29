@@ -93,9 +93,6 @@ session_start();
                     <a href="#"><span class="lnr lnr-magnifier"></span></a>
                   </li>
                   <!--/.search-->
-                  <li class="nav-setting">
-                    <a href="#"><span class="lnr lnr-cog"></span></a>
-                  </li>
                   <!--/.search-->
                   <li class="dropdown">
                     <a href="<?=$data['base_path'];?>/home/cart" class="dropdown-toggle" data-toggle="dropdown">
