@@ -72,26 +72,25 @@
         </div>
 
         </section>
+        <!--
         <center>
-        <form method="post" action="#">
+        <form method="post">
         <div class="hm-foot-email">
             <label for="zona">Zona</label>
             <select class="form-control" name="zona" style="width: 270px; height:50px;" required>
             <?php
-            foreach($zone as $row){
+            //foreach($zone as $row){
             ?>
-            <option value="<?=$row['idZona'];?>" selected><?=$row['provincia'];?></option>
+            <option value="<?php//$row['idZona'];?>" selected><?php//$row['provincia'];?></option>
             <?php
-            }
+            //}
             ?>
             </select>
             <button class="btn-cart welcome-add-cart" type="submit">Cerca</button>
         </div>
         </form>
         </center>
-        <br/>
-        <br/>
-        <br/>
+        -->
         <center>
         <form method="post" action="<?=$data['base_path'];?>/deliveries/companiesnop">
             <label>aziende che forniscono sia prodotti finiti che semifiniti, i cui articoli non sono mai
