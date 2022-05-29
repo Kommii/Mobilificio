@@ -184,7 +184,7 @@ session_start();
                   <?php
                   if(isset($_SESSION['username']))  
                     {
-                      if($_SESSION['admin'] == 1){
+                      if(isset($_SESSION['admin'])){
                         ?>
                         <li><a href="<?= $data['base_path']; ?>/products/add">Aggiungi prodotto</a></li>
                         <?php

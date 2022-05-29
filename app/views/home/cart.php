@@ -46,7 +46,9 @@ if (!isset($_SESSION['username'])) {
                   <img src="<?= $row['immagine']; ?>" alt="new-arrivals images" />
 
                   <div class="single-new-arrival-bg-overlay"></div>
-
+                  <div class="new-arrival-cart">
+                    
+                  </div>
                 </div>
 
                 <h4><a href="#"><?= $row['nome']; ?></a></h4>
@@ -59,6 +61,9 @@ if (!isset($_SESSION['username'])) {
         </div>
       </div>
     </div>
+  </section>
+  <section id="new-arrivals" class="new-arrivals">
+  <div class="container">
     <div class="new-arrivals-content">
       <div class="welcome-hero-txt">
         <center>
@@ -77,14 +82,7 @@ if (!isset($_SESSION['username'])) {
 
                   <div class="single-new-arrival-bg-overlay"></div>
                   <div class="new-arrival-cart">
-                    <p>
-                      <span class="lnr lnr-cart"></span>
-                      <a href="#">add <span>to </span> cart</a>
-                    </p>
-                    <p class="arrival-review pull-right">
-                      <span class="lnr lnr-heart"></span>
-                      <span class="lnr lnr-frame-expand"></span>
-                    </p>
+                    
                   </div>
                 </div>
               </a>
@@ -96,6 +94,9 @@ if (!isset($_SESSION['username'])) {
         }
         ?>
         <!--/.container-->
+        </div>
+      </div>
+    </div>
   </section>
   <section id="new-arrivals" class="new-arrivals">
     <div class="container">

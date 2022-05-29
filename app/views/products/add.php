@@ -47,7 +47,7 @@ $categorie = $data['categorie'];
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Lunghezza">Lunghezza</label>
-                            <input type="number" class="form-control" name="Lunghezza" required />
+                            <input type="number" min=1 class="form-control" name="Lunghezza" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -55,7 +55,7 @@ $categorie = $data['categorie'];
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Larghezza">Larghezza</label>
-                            <input type="number" class="form-control" name="Larghezza" required />
+                            <input type="number" min=1 class="form-control" name="Larghezza" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -63,7 +63,7 @@ $categorie = $data['categorie'];
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Altezza">Altezza</label>
-                            <input type="number" class="form-control" name="Altezza" required />
+                            <input type="number" min=1 class="form-control" name="Altezza" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -103,14 +103,14 @@ $categorie = $data['categorie'];
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="PrezzoA">Prezzo di acquisto</label>
-                            <input type="number" class="form-control"name="PrezzoA" required />
+                            <input type="number" min=1 class="form-control"name="PrezzoA" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
                         <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="PrezzoV">Prezzo di vendita</label>
-                            <input type="number" class="form-control"name="PrezzoV" required />
+                            <input type="number" min=1 class="form-control"name="PrezzoV" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->

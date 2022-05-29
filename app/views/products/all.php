@@ -27,24 +27,23 @@ include("header.php");
                   <img src="<?= $row['immagine']; ?>" alt="new-arrivals images" />
 
                   <div class="single-new-arrival-bg-overlay"></div>
-                  <div class="new-arrival-cart">
+                  
                     <?php
-                    $admin = $_SESSION['admin'];
-                    if ($admin == 1) {
+                    //$admin = $_SESSION['admin'];
+                    if (isset($_SESSION['admin'])) {
                     ?>
+                    <div class="new-arrival-cart">
                     <p>
-                      <span class="lnr lnr-cart"></span>
                       <a href="<?= $data['base_path'] ?>/products/update/<?= $row['idProdotto']; ?>">MODIFICA</a>
                     </p>
                     <p>
-                      <span class="lnr lnr-cart"></span>
                       <a href="<?= $data['base_path'] ?>/products/delete/<?= $row['idProdotto']; ?>">CANCELLA</a>
                     </p>
+                    </div>
                     <?php
-                    }
+                    }               
                     ?>
-                    
-                  </div>
+            
                 </div>
               </a>
               <h4><a href="<?= $data['base_path'] ?>/products/detail/<?= $row['idProdotto']; ?>"><?= $row['nome']; ?></a></h4>

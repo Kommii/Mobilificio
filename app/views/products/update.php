@@ -37,7 +37,7 @@ include("header_2.php");
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Nome">Lunghezza</label>
-                            <input type="number" class="form-control" placeholder="<?= $product['lunghezza']; ?>" name="Lunghezza" value="<?= $product['lunghezza']; ?>" required />
+                            <input type="number" class="form-control" min=1  placeholder="<?= $product['lunghezza']; ?>" name="Lunghezza" value="<?= $product['lunghezza']; ?>" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -45,7 +45,7 @@ include("header_2.php");
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Nome">Larghezza</label>
-                            <input type="number" class="form-control" placeholder="<?= $product['larghezza']; ?>" name="Larghezza" value="<?= $product['larghezza']; ?>" required />
+                            <input type="number" class="form-control" min=1 placeholder="<?= $product['larghezza']; ?>" name="Larghezza" value="<?= $product['larghezza']; ?>" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -53,7 +53,7 @@ include("header_2.php");
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Nome">Altezza</label>
-                            <input type="number" class="form-control" placeholder="<?= $product['altezza']; ?>" name="Altezza" value="<?= $product['altezza']; ?>" required />
+                            <input type="number" class="form-control" min=1 placeholder="<?= $product['altezza']; ?>" name="Altezza" value="<?= $product['altezza']; ?>" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
@@ -69,7 +69,7 @@ include("header_2.php");
                     <div class="hm-foot-email">
                         <div class="foot-email-box">
                             <label for="Nome">Prezzo di vendita</label>
-                            <input type="number" class="form-control" placeholder="<?= $product['prezzoV']; ?>" name="PrezzoV" value="<?= $product['prezzoV']; ?>" required />
+                            <input type="number" class="form-control" min=1 placeholder="<?= $product['prezzoV']; ?>" name="PrezzoV" value="<?= $product['prezzoV']; ?>" required />
                             <br><br>
                         </div>
                         <!--/.foot-email-box-->
