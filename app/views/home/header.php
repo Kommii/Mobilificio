@@ -169,6 +169,7 @@ global $data
                   {
                     ?> 
                       <li><a href="<?= $data['base_path']; ?>/supplies/all">Forniture</a></li>
+                      <li><a href="<?= $data['base_path']; ?>/deliveries/all">Consegne</a></li>
                     <?php
                   }
                   if(isset($_SESSION['username']))  
