@@ -34,10 +34,26 @@ function model_products_detail($id)
   return $rows;
 }
 
+
+function model_presenzapr_delete($id)
+{
+  $conn = db_connect();
+  $idProd = intval($id);
+  $sql = "DELETE FROM presenzapr WHERE idProdotto='$idProd'";
+  $result = $conn -> query($sql);
+    if(!$result)
+    {
+        echo $conn->error;
+        exit();
+    }
+    $conn->close();
+}
+
 function model_products_delete($id)
 {
   $conn = db_connect();
   $idProd = intval($id);
+  model_presenzapr_delete($idProd);
   $sql = "DELETE FROM prodotto WHERE idProdotto='$idProd'";
   $result = $conn -> query($sql);
     if(!$result)
