@@ -182,6 +182,12 @@ session_start();
                   <li><a href="<?= $data['base_path']; ?>/products/all">Prodotti</a></li>
                   <li><a href="<?= $data['base_path']; ?>/packets/all">Pacchetti</a></li>
                   <?php
+                  if(isset($_SESSION['admin']))
+                  {
+                    ?> 
+                      <li><a href="<?= $data['base_path']; ?>/supplies/all">Forniture</a></li>
+                    <?php
+                  }
                   if(isset($_SESSION['username']))  
                     {
                       ?> 
