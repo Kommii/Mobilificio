@@ -98,14 +98,14 @@ function get_all_categorie(){
   return $rows;
 }
 
-function model_products_add($tipo, $nome, $descrizione, $lunghezza, $larghezza, $altezza, $immagine, $prezzoV, $prezzoA, $forma, $materiale, $categoria, $azienda ){
+function model_products_add($tipo, $nome, $descrizione, $lunghezza, $larghezza, $altezza, $immagine, $prezzoV, $prezzoA, $forma, $materiale, $categoria){
   $conn = db_connect();
   
   if($materiale == "" || $forma == ""){
-    $sql = "INSERT INTO `prodotto` (`idProdotto`, `tipo`, `nome`, `descrizione`, `lunghezza`, `larghezza`, `altezza`, `forma`, `materiale`, `immagine`, `prezzoA`, `prezzoV`, `idCategoria`, `idFornProd`) VALUES (NULL, '$tipo', '$nome', '$descrizione', '$lunghezza', '$larghezza', '$altezza', NULL, NULL, '$immagine', '$prezzoA', '$prezzoV', '$categoria', '$azienda')";
+    $sql = "INSERT INTO `prodotto` (`idProdotto`, `tipo`, `nome`, `descrizione`, `lunghezza`, `larghezza`, `altezza`, `forma`, `materiale`, `immagine`, `prezzoA`, `prezzoV`, `idCategoria`) VALUES (NULL, '$tipo', '$nome', '$descrizione', '$lunghezza', '$larghezza', '$altezza', NULL, NULL, '$immagine', '$prezzoA', '$prezzoV', '$categoria')";
   }
   else{
-  $sql = "INSERT INTO `prodotto` (`idProdotto`, `tipo`, `nome`, `descrizione`, `lunghezza`, `larghezza`, `altezza`, `forma`, `materiale`, `immagine`, `prezzoA`, `prezzoV`, `idCategoria`, `idFornProd`) VALUES (NULL, '$tipo', '$nome', '$descrizione', '$lunghezza', '$larghezza', '$altezza', '$forma', '$materiale', '$immagine', '$prezzoA', '$prezzoV', '$categoria', '$azienda')";
+  $sql = "INSERT INTO `prodotto` (`idProdotto`, `tipo`, `nome`, `descrizione`, `lunghezza`, `larghezza`, `altezza`, `forma`, `materiale`, `immagine`, `prezzoA`, `prezzoV`, `idCategoria`) VALUES (NULL, '$tipo', '$nome', '$descrizione', '$lunghezza', '$larghezza', '$altezza', '$forma', '$materiale', '$immagine', '$prezzoA', '$prezzoV', '$categoria')";
   }
   $result = $conn -> query($sql);
     if(!$result)

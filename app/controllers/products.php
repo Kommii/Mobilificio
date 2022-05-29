@@ -62,8 +62,8 @@ function controller_products_addact()
     $prezzoA=intval($_POST['PrezzoA']);
     $prezzoV=intval($_POST['PrezzoV']);
     $idCategoria=intval($_POST['Categoria']);
-    $idFornProd=intval($_POST['Azienda']);
-    model_products_add($tipo,$nome, $desc,$lun, $lar, $alt, $imm, $prezzoV, $prezzoA, $forma, $materiale, $idCategoria, $idFornProd);
+    //$idFornProd=intval($_POST['Azienda']);
+    model_products_add($tipo,$nome, $desc,$lun, $lar, $alt, $imm, $prezzoV, $prezzoA, $forma, $materiale, $idCategoria);
     view_render_html();
 }
 

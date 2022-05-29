@@ -181,11 +181,6 @@
                   <?php
                   if(isset($_SESSION['username']))  
                     {
-                      if(isset($_SESSION['admin'])){
-                      ?>
-                      <li><a href="<?= $data['base_path']; ?>/products/add">Aggiungi prodotto</a></li>
-                      <?php
-                    }
                       ?> 
                         <li><a href="<?= $data['base_path']; ?>/home/logout">Logout</a></li>
                       <?php

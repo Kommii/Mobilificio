@@ -78,7 +78,7 @@ $categorie = $data['categorie'];
                         <!--/.foot-email-box-->
                         <div class="hm-foot-email">
                             <label for="Materiale">Materiale</label>
-                            <select class="form-control" name="Tipo" style="width: 270px; height:50px;">
+                            <select class="form-control" name="Materiale" style="width: 270px; height:50px;">
                             <option value=""></option>
                             <option value="metallo">Metallo</option>
                             <option value="ferro">Ferro</option>
@@ -121,20 +121,6 @@ $categorie = $data['categorie'];
                             foreach($categorie as $row){
                             ?>
                             <option value="<?=$row['idCategoria'];?>" selected><?=$row['descrizione'];?></option>
-                            <?php
-                            }
-                            ?>
-                            </select>
-                            <br><br>
-                            </div>
-                        <!--/.foot-email-box-->
-                        <div class="hm-foot-email">
-                            <label for="Azienda">Azienda fornitrice/produttrice</label>
-                            <select class="form-control" name="Azienda" style="width: 270px; height:50px;" required>
-                            <?php
-                            foreach($aziende as $row){
-                            ?>
-                            <option value="<?=$row['idFornProd'];?>" selected><?=$row['Nome'];?></option>
                             <?php
                             }
                             ?>

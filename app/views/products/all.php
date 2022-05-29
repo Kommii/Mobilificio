@@ -24,7 +24,7 @@ include("header.php");
             <div class="single-new-arrival">
               <a href="<?= $data['base_path'] ?>/products/detail/<?= $row['idProdotto']; ?>">
                 <div class="single-new-arrival-bg">
-                  <img src="<?= $row['immagine']; ?>" alt="new-arrivals images" />
+                  <img src="<?=$row['immagine'];?>" alt="new-arrivals images" />
 
                   <div class="single-new-arrival-bg-overlay"></div>
                   
@@ -58,6 +58,29 @@ include("header.php");
   </div>
   <!--/.container-->
 </section>
+<center>
+<section id="new-arrivals" class="new-arrivals">
+  <div class="container">
+    <div class="welcome-hero-txt">
+      <?php
+      if (isset($_SESSION['admin'])) {
+      ?>
+      <div class="welcome-hero-txt">
+        <center>
+          <h4><b>Aggiungi prodotto al database</b></h4>
+        </center>
+      </div>
+        <form method="post" action="<?= $data['base_path']; ?>/products/add">
+          <button class="btn-cart welcome-add-cart"><span class="lnr lnr-plus-circle"></span>aggiungi prodotto</button>
+        </form>
+        <?php
+      }
+      ?>
+    </div>
+  </div>
+  <!--/.container-->
+</section>
+    </center>
 <!--/.new-arrivals-->
 <!--new-arrivals end -->
 <?php
