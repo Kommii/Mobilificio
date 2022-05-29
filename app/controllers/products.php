@@ -74,3 +74,9 @@ function controller_products_add()
     $data['categorie'] = get_all_categorie();
     view_render_html();
 }
+
+function controller_products_removepr($id)
+{
+    model_presenzapr_delete($id);
+    view_render_html();
+}

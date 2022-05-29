@@ -15,4 +15,10 @@ function controller_packets_detail($id)
     $data['products'] = model_packets_allproducts($id);
     view_render_html();
 }
+
+function controller_packets_removepa($id)
+{
+    model_presenzapa_delete($id);
+    view_render_html();
+}
 ?>

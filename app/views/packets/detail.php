@@ -36,7 +36,10 @@ include("header_2.php");
       </div>
     </div>
   </div>
-  <div class="single-welcome-hero">
+</section>
+<center>
+<section id="new-arrivals" class="new-arrivals">
+  <div class="container">
     <div class="welcome-hero-txt">
       <?php
       if (isset($_SESSION['username'])) {
@@ -54,6 +57,7 @@ include("header_2.php");
   </div>
   <!--/.container-->
 </section>
+    </center>
 <!--/.new-arrivals-->
 <!--new-arrivals end -->
 <?php

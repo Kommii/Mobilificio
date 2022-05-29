@@ -35,4 +35,18 @@ function model_packets_allproducts($idPacchetto)
     return $rows;
 }
 
+function model_presenzapa_delete($id)
+{
+  $conn = db_connect();
+  $idPa = intval($id);
+  $sql = "DELETE FROM presenzapa WHERE idPacchetto='$idPa'";
+  $result = $conn -> query($sql);
+    if(!$result)
+    {
+        echo $conn->error;
+        exit();
+    }
+    $conn->close();
+}
+
 ?>

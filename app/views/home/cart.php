@@ -47,7 +47,11 @@ if (!isset($_SESSION['username'])) {
 
                   <div class="single-new-arrival-bg-overlay"></div>
                   <div class="new-arrival-cart">
-                    
+                    <div class="new-arrival-cart">
+                    <p>
+                      <a href="<?= $data['base_path'] ?>/products/removepr/<?= $row['idProdotto']; ?>">RIMUOVI</a>
+                    </p>
+                    </div>
                   </div>
                 </div>
 
@@ -82,7 +86,9 @@ if (!isset($_SESSION['username'])) {
 
                   <div class="single-new-arrival-bg-overlay"></div>
                   <div class="new-arrival-cart">
-                    
+                    <p>
+                      <a href="<?= $data['base_path'] ?>/packets/removepa/<?= $row['idPacchetto']; ?>">RIMUOVI</a>
+                    </p>
                   </div>
                 </div>
               </a>
