@@ -22,6 +22,7 @@ function model_products_all()
   return $rows;
 }
 
+
 function model_products_detail($id)
 {
   $conn = db_connect();

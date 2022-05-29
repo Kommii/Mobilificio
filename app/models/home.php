@@ -23,6 +23,16 @@ function model_get_user($username)
     return $rows;
 }
 
+function model_products_top(){
+  $conn = db_connect();
+  $sql = "SELECT * FROM prodotto ORDER BY idCategoria LIMIT 3";
+  $result = $conn->query($sql);
+  $rows = $result->fetch_all(MYSQLI_ASSOC);
+  $result->free();
+  $conn->close();
+  return $rows;
+}
+
 function model_get_carrello_prodotti($username)
 {
   $mysqli = db_connect();

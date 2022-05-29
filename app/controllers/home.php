@@ -3,6 +3,7 @@ session_start();
 require '../app/models/home.php';
 function controller_home_index()
 {
+    global $data;
     view_render_html();
 }
 
