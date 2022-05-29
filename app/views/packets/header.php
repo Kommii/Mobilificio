@@ -181,10 +181,16 @@ session_start();
                   <li><a href="<?= $data['base_path']; ?>">Home</a></li>
                   <li><a href="<?= $data['base_path']; ?>/products/all">Prodotti</a></li>
                   <li><a href="<?= $data['base_path']; ?>/packets/all">Pacchetti</a></li>
+                  
                   <?php
                   if(isset($_SESSION['username']))  
                     {
-                      ?> 
+                    if($_SESSION['admin'] == 1){
+                    ?>
+                    <li><a href="<?= $data['base_path']; ?>/products/add">Aggiungi prodotto</a></li>
+                    <?php
+                  }
+                  ?>
                         <li><a href="<?= $data['base_path']; ?>/home/logout">Logout</a></li>
                       <?php
                     } 
