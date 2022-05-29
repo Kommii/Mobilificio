@@ -116,4 +116,15 @@ function model_products_add($tipo, $nome, $descrizione, $lunghezza, $larghezza, 
     $conn->close();
 }
 
+function model_products_sales()
+{
+    $conn = db_connect();
+    $sql = "SELECT pr.*, c.prezzoS from prodotto as pr inner join costituzione as c on pr.idProdotto=c.idProdotto inner join promozione as pro on c.idPromozione=pro.idPromozione where NOW() >= pro.dataI and NOW() <= pro.dataF";
+    $result = $conn->query($sql);
+    $rows = $result->fetch_all(MYSQLI_ASSOC);
+    $result->free();
+    $conn->close();
+    return $rows;
+}
+
 ?>

@@ -178,6 +178,7 @@
                   <li><a href="<?= $data['base_path']; ?>">Home</a></li>
                   <li><a href="<?= $data['base_path']; ?>/products/all">Prodotti</a></li>
                   <li><a href="<?= $data['base_path']; ?>/packets/all">Pacchetti</a></li>
+                  <li><a href="<?= $data['base_path']; ?>/sales/all">Sconti</a></li>
                   <?php
                   if(isset($_SESSION['admin']))
                   {

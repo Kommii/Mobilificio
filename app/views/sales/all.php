@@ -13,7 +13,7 @@ include("header.php");
     <div class="new-arrivals-content">
       <div class="welcome-hero-txt">
         <center>
-          <h2><b>Prodotti</b></h2>
+          <h2><b>Prodotti scontati</b></h2>
         </center>
       </div>
       <div class="row">
@@ -47,7 +47,7 @@ include("header.php");
                 </div>
               </a>
               <h4><a href="<?= $data['base_path'] ?>/products/detail/<?= $row['idProdotto']; ?>"><?= $row['nome']; ?></a></h4>
-              <!--<p class="arrival-product-price"><?php//= $row['prezzoV']; ?>€</p>-->
+              <p class="arrival-product-price"><?= $row['prezzoS']; ?>€ <del><?= $row['prezzoV']; ?>€</del></p>
             </div>
           </div>
         <?php
@@ -58,29 +58,6 @@ include("header.php");
   </div>
   <!--/.container-->
 </section>
-<center>
-<section id="new-arrivals" class="new-arrivals">
-  <div class="container">
-    <div class="welcome-hero-txt">
-      <?php
-      if (isset($_SESSION['admin'])) {
-      ?>
-      <div class="welcome-hero-txt">
-        <center>
-          <h4><b>Aggiungi prodotto al database</b></h4>
-        </center>
-      </div>
-        <form method="post" action="<?= $data['base_path']; ?>/products/add">
-          <button class="btn-cart welcome-add-cart"><span class="lnr lnr-plus-circle"></span>aggiungi prodotto</button>
-        </form>
-        <?php
-      }
-      ?>
-    </div>
-  </div>
-  <!--/.container-->
-</section>
-    </center>
 <!--/.new-arrivals-->
 <!--new-arrivals end -->
 <?php

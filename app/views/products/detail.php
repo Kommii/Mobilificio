@@ -1,7 +1,17 @@
 <?php 
    global $data;
    $product = $data['row'];
-   include("header_2.php");
+   $scontati = $data['scontati'];
+   $ok = false;
+   foreach($scontati as $p)
+   {
+      if($p['idProdotto'] == $product['idProdotto'])
+      {
+        $ok = true;
+        $prezzoS=$p['prezzoS'];
+      }
+   }
+   include("header_2.php");   
 ?>
             <!--/.carousel-inner -->
             <div class="carousel-inner" role="listbox">
@@ -23,9 +33,24 @@
                           Larghezza: <?=$product['larghezza'];?> cm <br />
                           Altezza: <?=$product['altezza'];?> cm</p>
                           <div class="packages-price">
+                            <?php
+                            if($ok)
+                            {
+                              ?>
                             <p>
-                              <?=$product['prezzoV'];?>€
+                              <?=$prezzoS?>€ <del><?=$product['prezzoV'];?>€</del>
                             </p>
+                            <?php
+                            }
+                            else
+                            {
+                              ?>
+                              <p>
+                              <?=$product['prezzoV'];?>€
+                              </p>
+                            <?php
+                            }
+                            ?>
                           </div>
                           <br/>
                           <?php

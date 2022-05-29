@@ -12,6 +12,7 @@ function controller_products_detail($id)
 {
     global $data;
     $data['row'] = model_products_detail($id);
+    $data['scontati'] = model_products_sales();
     view_render_html();
 }
 
