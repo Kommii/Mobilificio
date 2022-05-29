@@ -21,4 +21,12 @@ function controller_packets_removepa($id)
     model_presenzapa_delete($id);
     view_render_html();
 }
+
+function controller_packets_search()
+{
+    global $data;
+    $pacchetto=$_GET['pacchetto'];
+    $data['rows']=model_packets_search($pacchetto);
+    view_render_html();
+}
 ?>

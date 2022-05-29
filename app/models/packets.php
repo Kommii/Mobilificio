@@ -49,4 +49,17 @@ function model_presenzapa_delete($id)
     $conn->close();
 }
 
+function model_packets_search($nome)
+{
+  $conn = db_connect();
+  $pacchetto = $conn -> real_escape_string($nome);
+  $sql = "SELECT * FROM pacchetto
+  WHERE nomePa like '%$pacchetto%'";
+  $result = $conn->query($sql);
+  $rows = $result->fetch_all(MYSQLI_ASSOC);
+  $result->free();
+  $conn->close();
+  return $rows;
+}
+
 ?>

@@ -85,7 +85,7 @@ function controller_products_removepr($id)
 function controller_products_search()
 {
     global $data;
-    $prodotto=$_POST['prodotto'];
+    $prodotto=$_GET['prodotto'];
     $data['rows']=model_products_search($prodotto);
     view_render_html();
 }
