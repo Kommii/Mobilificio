@@ -72,23 +72,6 @@
         </div>
 
         </section>
-        <center>
-        <form method="post" action="#">
-        <div class="hm-foot-email">
-            <label for="zona">Zona</label>
-            <select class="form-control" name="zona" style="width: 270px; height:50px;" required>
-            <?php
-            foreach($zone as $row){
-            ?>
-            <option value="<?=$row['idZona'];?>" selected><?=$row['provincia'];?></option>
-            <?php
-            }
-            ?>
-            </select>
-            <button class="btn-cart welcome-add-cart" type="submit">Cerca</button>
-        </div>
-        </form>
-        </center>
         <?php
             include("footer.php");
     }

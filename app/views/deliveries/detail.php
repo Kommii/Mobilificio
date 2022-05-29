@@ -47,13 +47,11 @@ include("header_2.php");
 <section id="new-arrivals" class="new-arrivals">
     <div class="container">
       <!--/.section-header-->
-      <div class="new-arrivals-content">
         <div class="welcome-hero-txt">
           <center>
             <h4>Totale: <?= $tot; ?>€</h4>
           </center>
         </div>
-      </div>
     </div>
   </section>
 <?php

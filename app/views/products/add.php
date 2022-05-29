@@ -113,6 +113,7 @@ $categorie = $data['categorie'];
                             <input type="number" min=1 class="form-control"name="PrezzoV" required />
                             <br><br>
                         </div>
+                        </div>
                         <!--/.foot-email-box-->
                         <div class="hm-foot-email">
                             <label for="Categoria">Categoria</label>
@@ -126,7 +127,7 @@ $categorie = $data['categorie'];
                             ?>
                             </select>
                             <br><br>
-                            </div>
+                        </div>
                         <!--/.foot-email-box-->
                     </div>
                     <button class="btn-cart welcome-add-cart" type="submit">Inserisci</button>
