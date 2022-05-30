@@ -65,11 +65,18 @@ function model_products_delete($id)
     $conn->close();
 }
 
-function model_products_update($id, $nome, $descrizione, $lunghezza, $larghezza, $altezza, $immagine, $prezzoV)
+function model_products_update($id, $n, $d, $lu, $la, $a, $i, $p)
 {
   $conn = db_connect();
+  $nome = $conn -> real_escape_string($n);
+  $descrizione = $conn -> real_escape_string($d);
+  $lunghezza = $conn -> real_escape_string($lu);
+  $larghezza = $conn -> real_escape_string($la);
+  $altezza = $conn -> real_escape_string($a);
+  $immagine = $conn -> real_escape_string($i);
+  $prezzoV = $conn -> real_escape_string($p);
   $idProd = intval($id);
-  $sql = "UPDATE prodotto SET nome = '$nome' , descrizione = '$descrizione' , lunghezza = $lunghezza , larghezza = $larghezza , altezza = $altezza , immagine = '$immagine' , prezzoV = $prezzoV WHERE idProdotto = $id";
+  $sql = "UPDATE prodotto SET nome = '$nome' , descrizione = '$descrizione' , lunghezza = $lunghezza , larghezza = $larghezza , altezza = $altezza , immagine = '$immagine' , prezzoV = $prezzoV WHERE idProdotto = $idProd";
   $result = $conn -> query($sql);
     if(!$result)
     {
@@ -99,9 +106,20 @@ function get_all_categorie(){
   return $rows;
 }
 
-function model_products_add($tipo, $nome, $descrizione, $lunghezza, $larghezza, $altezza, $immagine, $prezzoV, $prezzoA, $forma, $materiale, $categoria){
+function model_products_add($t, $n, $d, $lu, $la, $a, $i, $pv, $pa, $f, $m, $c){
   $conn = db_connect();
-  
+  $tipo = $conn->real_escape_string($t);
+  $nome = $conn->real_escape_string($n);
+  $descrizione = $conn->real_escape_string($d);
+  $lunghezza = intval($lu);
+  $larghezza = intval($la);
+  $altezza = intval($a);
+  $immagine = $conn->real_escape_string($i)
+  $prezzoV = $conn->real_escape_string($pv);
+  $prezzoA = $conn->real_escape_string($pa);
+  $forma = $conn->real_escape_string($f);
+  $materiale = $conn->real_escape_string($m);
+  $categoria = intval($c);
   if($materiale == "" || $forma == ""){
     $sql = "INSERT INTO `prodotto` (`idProdotto`, `tipo`, `nome`, `descrizione`, `lunghezza`, `larghezza`, `altezza`, `forma`, `materiale`, `immagine`, `prezzoA`, `prezzoV`, `idCategoria`) VALUES (NULL, '$tipo', '$nome', '$descrizione', '$lunghezza', '$larghezza', '$altezza', NULL, NULL, '$immagine', '$prezzoA', '$prezzoV', '$categoria')";
   }

@@ -105,7 +105,8 @@ function model_insert_to_cart($idProdotto, $quantita, $username)
 
 function all_products_id_cart($idCarrello){
   $mysqli = db_connect();
-  $sql="SELECT pr.idProdotto from carrello as ca INNER JOIN presenzapr as pr on ca.idCarrello=pr.idCarrello where pr.idCarrello = $idCarrello";
+  $id=intval($idCarrello);
+  $sql="SELECT pr.idProdotto from carrello as ca INNER JOIN presenzapr as pr on ca.idCarrello=pr.idCarrello where pr.idCarrello = $id";
   $result=$mysqli->query($sql);
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   $result->free();
@@ -115,7 +116,8 @@ function all_products_id_cart($idCarrello){
 
 function all_packet_id_cart($idCarrello){
   $mysqli = db_connect();
-  $sql="SELECT pa.idPacchetto from carrello as ca INNER JOIN presenzapa as pa on ca.idCarrello=pa.idCarrello where pa.idCarrello = $idCarrello";
+  $id=intval($idCarrello);
+  $sql="SELECT pa.idPacchetto from carrello as ca INNER JOIN presenzapa as pa on ca.idCarrello=pa.idCarrello where pa.idCarrello = $id";
   $result=$mysqli->query($sql);
   $rows = $result->fetch_all(MYSQLI_ASSOC);
   $result->free();
