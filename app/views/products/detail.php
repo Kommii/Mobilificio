@@ -32,6 +32,15 @@
                           <p>Lunghezza: <?=$product['lunghezza'];?> cm <br />
                           Larghezza: <?=$product['larghezza'];?> cm <br />
                           Altezza: <?=$product['altezza'];?> cm</p>
+                          <?php
+                          if(isset($product['materiale']) && isset($product['forma']))
+                          {
+                            ?>
+                            <p>Forma: <?=$product['forma'];?><br/>
+                            Materiale: <?=$product['materiale'];?><br/></p>
+                            <?php
+                          }
+                          ?>
                           <div class="packages-price">
                             <?php
                             if($ok)
