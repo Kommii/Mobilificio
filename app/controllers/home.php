@@ -38,6 +38,7 @@ function controller_home_cart()
     global $data;
     if(isset($_SESSION['username']))
     {
+        //$data['scontati'] = model_home_sales();
         $data['prodotti']=model_get_carrello_prodotti($_SESSION['username']);
         $data['pacchetti']=model_get_carrello_pacchetti($_SESSION['username']);
     }
