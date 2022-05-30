@@ -114,7 +114,7 @@ function model_products_add($t, $n, $d, $lu, $la, $a, $i, $pv, $pa, $f, $m, $c){
   $lunghezza = intval($lu);
   $larghezza = intval($la);
   $altezza = intval($a);
-  $immagine = $conn->real_escape_string($i)
+  $immagine = $conn->real_escape_string($i);
   $prezzoV = $conn->real_escape_string($pv);
   $prezzoA = $conn->real_escape_string($pa);
   $forma = $conn->real_escape_string($f);
